@@ -1,0 +1,25 @@
+# Install the necessary package
+pip install django
+
+# check for the version
+python -m django --version
+
+# initialize the project
+django-admin startproject <name>
+
+# to see the structure
+tree
+
+# File structure
+# manage.py store the setting
+
+# run server
+python manage.py runserver
+
+# create app on the server
+python manage.py startapp <name>
+
+# superuser create aka admin
+python manage.py makemigrations
+python mamage.py migrate
+python createsuperuser
