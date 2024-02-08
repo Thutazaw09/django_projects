@@ -1,17 +1,12 @@
 from django.shortcuts import render
 from django.http import  HttpRequest
-# Create your views here.
+from .models import Post
 
-# mock data
+
+#  data format
 posts = [
     {
         'author': 'AgAge',
-        'title': 'Sleep',
-        'content': 'First post content',
-        'data_posted': 'August 27,2018',
-    },
-    {
-        'author': 'MgMg',
         'title': 'Sleep',
         'content': 'First post content',
         'data_posted': 'August 27,2018',
@@ -21,7 +16,7 @@ posts = [
 
 def home(request: HttpRequest):
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context)
 

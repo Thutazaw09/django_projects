@@ -23,3 +23,35 @@ python manage.py startapp <name>
 python manage.py makemigrations
 python mamage.py migrate
 python createsuperuser
+
+# database 
+# object relational mapper
+# represent data as object
+
+python manage.py sqlmigrate blog 0001
+
+python manage.py shell
+from blog.models import Post
+from django.contrib.auth.models import User
+
+User.objects.all()
+User.objects.first()
+User.objects.filter(username="CoryMS").first()
+user = User.objects.filter(username="CoryMS").first()
+user.id / pk / 
+
+Post.objects.all()
+post_1 = Post(title="Blog_1",content="First Post",author=user) # no need to specify with date
+post_1.save()
+post_1 = Post(title="Blog_1",content="First Post",author_id=user.id)
+
+post.author
+post.author.email
+user.post_set.all()
+
+user.post_set.craete(title='Blog 3',content='Thrid Post Content')
+
+
+
+
+
