@@ -51,7 +51,7 @@ user.post_set.all()
 
 user.post_set.craete(title='Blog 3',content='Thrid Post Content')
 
-
-
+# account registration
+python manage.py startapp users
 
 
